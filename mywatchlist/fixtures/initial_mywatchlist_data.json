@@ -1,0 +1,112 @@
+[
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":1,
+        "fields":{
+            "watched":0,
+            "title": "UP",
+            "rating": 4,
+            "release_date" : "2022-09-21",
+            "review": "so good la"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":2,
+        "fields":{
+            "watched":1,
+            "title": "UP",
+            "rating": 4,
+            "release_date" : "2022-09-21",
+            "review": "so good la"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":3,
+        "fields":{
+            "watched":0,
+            "title": "UP",
+            "rating": 4,
+            "release_date" : "2022-09-21",
+            "review": "so good la"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":4,
+        "fields":{
+            "watched":0,
+            "title": "UP",
+            "rating": 4,
+            "release_date" : "2022-09-21",
+            "review": "so good la"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":5,
+        "fields":{
+            "watched":0,
+            "title": "UP",
+            "rating": 4,
+            "release_date" : "2022-09-21",
+            "review": "so good la"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":6,
+        "fields":{
+            "watched":0,
+            "title": "UP",
+            "rating": 4,
+            "release_date" : "2022-09-21",
+            "review": "so good la"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":7,
+        "fields":{
+            "watched":0,
+            "title": "UP",
+            "rating": 4,
+            "release_date" : "2022-09-21",
+            "review": "so good la"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":8,
+        "fields":{
+            "watched":0,
+            "title": "UP",
+            "rating": 4,
+            "release_date" : "2022-09-21",
+            "review": "so good la"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":9,
+        "fields":{
+            "watched":0,
+            "title": "UP",
+            "rating": 4,
+            "release_date" : "2022-09-21",
+            "review": "so good la"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":10,
+        "fields":{
+            "watched":0,
+            "title": "UP",
+            "rating": 4,
+            "release_date" : "2022-09-21",
+            "review": "so good la"
+        }
+    }
+]

@@ -1,0 +1,29 @@
+<h1> Implementing Data Delivery </h1>
+{% extends 'base.html' %}
+
+{% block content %}
+<h5>Nama: </h5>
+<p>{{name}}</p>
+
+<table>
+    <tr>
+    <th>watched</th>
+    <th>title</th>
+    <th>rating</th>
+    <th>release date</th>
+    <th>review</th>
+    </tr>
+    {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
+    {% for movie in watchlist %}
+        <tr>
+            <th>{{movie.watched}}</th>
+            <th>{{movie.title}}</th>
+            <th>{{movie.rating}}</th>
+            <th>{{movie.release_date}}</th>
+            <th>{{movie.review}}</th>
+        </tr>
+    {% endfor %}
+</table>
+
+{% endblock content %}
+
