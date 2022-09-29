@@ -1,0 +1,6 @@
+<div>
+    <h2>Anda akan menghapus sebuah task, cek kembali</h2>
+    <strong>Title: {{todo.title}}</strong><br /><strong>Description: {{todo.description}}</strong><br />
+    <h3>Delete Task?</h3>
+    <br /><form action="" method="POST">{% csrf_token %} <a href="{% url 'todolist:show_todolist' %}">Batal</a> <input name="delete" type="submit" value="delete" /></form>
+</div>

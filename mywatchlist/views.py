@@ -6,6 +6,7 @@ from django.core import serializers
 # Create your views here.
 def show_mywatchlist(request):
     the_watchlist = MyWatchList.objects.all()
+        
     context = {
         'watchlist': the_watchlist,
         'name': 'yan'

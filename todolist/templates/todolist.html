@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+<title>Your To-Do</title>
+{% endblock meta %}
+
+{% block content %}
+<h1>Your To-Do</h1>
+
+<h3>Hi {{user.username}}!</h3>
+
+  <table>
+    {% if tasks %}
+    <tr>
+      <th>User</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Description</th>
+      <th>Update</th>
+      <th>Delete</th>
+      <th>Status</th>
+    </tr>
+    {% comment %} Add the data below this line {% endcomment %}
+    {% for task in tasks %}
+    <tr>
+        <th>{{task.user}}</th>
+        <th>{{task.title}}</th>
+        <th>{{task.date}}</th>
+        <th>{{task.description}}</th>
+        <th><a href="{% url 'todolist:update' task.id %}">Update</a>
+        <th><a href="{% url 'todolist:deletion' task.id %}">Delete</a>
+        {% if task.is_finished %}
+            <th>Finished</th>
+        {% else %}
+            <th>Not Finished</th>
+        {% endif %}
+    </tr>
+{% endfor %}
+{% endif %}
+  </table>
+<button><a href="{% url 'todolist:logout_user' %}">Logout</a></button>
+<button><a href="{% url 'todolist:create_task' %}">Create Task</a></button>
+{% endblock content %}
