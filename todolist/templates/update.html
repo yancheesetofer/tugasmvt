@@ -1,3 +1,5 @@
+{% load tailwind_tags %}
+{% tailwind_css %}
 <div>
     <h2>Double check your update</h2>
  	<form method="POST" action="">{% csrf_token %}{{todo}}

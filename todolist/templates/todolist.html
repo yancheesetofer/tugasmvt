@@ -1,43 +1,85 @@
 {% extends 'base.html' %}
 
+{% load tailwind_tags %}
+
 {% block meta %}
 <title>Your To-Do</title>
+{% tailwind_css %}
 {% endblock meta %}
 
 {% block content %}
-<h1>Your To-Do</h1>
+<h1 class="font-bold leading-tight text-4xl mt-0 mb-2 text-blue-500">Your To-Do</h1>
 
-<h3>Hi {{user.username}}!</h3>
+<h3 class="font-bold leading-tight text-4xl mt-0 mb-2 text-blue-500">Hi {{user.username}}!</h3>
 
-  <table>
-    {% if tasks %}
-    <tr>
-      <th>User</th>
-      <th>Title</th>
-      <th>Date</th>
-      <th>Description</th>
-      <th>Update</th>
-      <th>Delete</th>
-      <th>Status</th>
-    </tr>
-    {% comment %} Add the data below this line {% endcomment %}
-    {% for task in tasks %}
-    <tr>
-        <th>{{task.user}}</th>
-        <th>{{task.title}}</th>
-        <th>{{task.date}}</th>
-        <th>{{task.description}}</th>
-        <th><a href="{% url 'todolist:update' task.id %}">Update</a>
-        <th><a href="{% url 'todolist:deletion' task.id %}">Delete</a>
-        {% if task.is_finished %}
-            <th>Finished</th>
-        {% else %}
-            <th>Not Finished</th>
-        {% endif %}
-    </tr>
-{% endfor %}
-{% endif %}
-  </table>
-<button><a href="{% url 'todolist:logout_user' %}">Logout</a></button>
-<button><a href="{% url 'todolist:create_task' %}">Create Task</a></button>
+<section class="bg-white py-20 lg:py-[120px]">
+  <div class="container">
+     <div class="flex flex-wrap -mx-4">
+        <div class="w-full px-4">
+           <div class="max-w-full overflow-x-auto">
+            <table class="table-auto w-full">
+              {% if tasks %}
+              <thead>
+                <tr class="bg-primary text-center">
+                    <th>User</th>
+                    <th>Title</th>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                    <th>Status</th>
+                  </tr>
+              </thead>
+              {% comment %} Add the data below this line {% endcomment %}
+              {% for task in tasks %}
+              <tbody>
+                <tr>
+                    <th>{{task.user}}</th>
+                    <th>{{task.title}}</th>
+                    <th>{{task.date}}</th>
+                    <th>{{task.description}}</th>
+                    <th class="
+                    text-center text-dark
+                    font-medium
+                    text-base
+                    py-5
+                    px-2
+                    bg-white
+                    border-b border-r border-[#E8E8E8]" ><a 
+                      class="
+                      border border-primary
+                      py-2
+                      px-6
+                      text-primary
+                      inline-block
+                      rounded
+                      hover:bg-primary hover:text-white"
+                      href="{% url 'todolist:update' task.id %}">Update</a>
+                    <th><a 
+                      class="
+                      border border-primary
+                      py-2
+                      px-6
+                      text-primary
+                      inline-block
+                      rounded
+                      hover:bg-primary hover:text-white"
+                      href="{% url 'todolist:deletion' task.id %}">Delete</a>
+                    {% if task.is_finished %}
+                        <th>Finished</th>
+                    {% else %}
+                        <th>Not Finished</th>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+            {% endif %}
+          </tbody>
+            </table>            
+          </div>
+        </div>
+      </div>
+  </div>
+</section>      
+<button class="bg-cyan-500 hover:bg-cyan-600"><a href="{% url 'todolist:logout_user' %}">Logout</a></button>
+<button class="bg-cyan-500 hover:bg-cyan-600 ..."><a href="{% url 'todolist:create_task' %}">Create Task</a></button>
 {% endblock content %}
